@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "categoryitem ")
-data class CategoryItem(
+@Entity(tableName = "categoryitems")
+data class CategoryItems(
 
     @PrimaryKey(autoGenerate = true)
     var id : Int,

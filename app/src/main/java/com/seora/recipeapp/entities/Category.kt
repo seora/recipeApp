@@ -8,11 +8,11 @@ import com.seora.recipeapp.entities.converter.CategoryListConverter
 @Entity(tableName = "Category")
 data class Category(
     @PrimaryKey(autoGenerate = true)
-    var id : Int,
+    var id:Int,
 
-    @ColumnInfo(name = "categoryitem")
+    @ColumnInfo(name = "categoryItems")
     @Expose
     @SerializedName("categories")
     @TypeConverters(CategoryListConverter::class)
-    var categoryitem: List<CategoryItem>? = null
+    var categoryitems: List<CategoryItems>? = null
 )

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@color/white"
     tools:context=".SplashActivity">
 
 
@@ -19,20 +18,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
                 android:text="All Recipes"
-                android:textSize="@dimen/_30sdp"
                 android:textColor="@color/black"
-                android:padding="@dimen/_10sdp"/>
+                android:textSize="@dimen/_20ssp" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="@dimen/_10sdp">
@@ -42,12 +40,11 @@
                     android:id="@+id/search_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/ThemeOverlay.Search"
-                    android:queryHint="Search for Recipe"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/search_bg"
                     android:iconifiedByDefault="false"
-                    android:background="@drawable/search_bg"/>
+                    android:queryBackground="@color/transparent"
+                    android:queryHint="Search for recipes"
+                    android:theme="@style/ThemeOverlay.Search" />
 
             </androidx.cardview.widget.CardView>
 
@@ -55,33 +52,32 @@
                 android:id="@+id/rv_main_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:itemCount="1"
                 android:layout_margin="@dimen/_10sdp"
                 android:orientation="horizontal"
-                tools:listitem="@layout/item_rv_main_category"/>
+                tools:itemCount="1"
+                tools:listitem="@layout/item_rv_main_category" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
                 android:text="Category name"
+                android:id="@+id/tvCategory"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_15ssp"
-                android:padding="@dimen/_10sdp"/>
+                android:textSize="@dimen/_15ssp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_sub_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:itemCount="1"
                 android:layout_margin="@dimen/_10sdp"
                 android:orientation="horizontal"
-                tools:listitem="@layout/item_rv_sub_category"/>
+                tools:itemCount="1"
+                tools:listitem="@layout/item_rv_sub_category" />
 
 
         </LinearLayout>
-
     </ScrollView>
-
 
 
 </RelativeLayout>
