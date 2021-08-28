@@ -8,7 +8,7 @@ import com.seora.recipeapp.adapter.SubCategoryAdapter
 import com.seora.recipeapp.entities.Recipes
 import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity:AppCompatActivity() {
+class HomeActivity: BaseActivity() {
 
     var arrMainCategory = ArrayList<Recipes>()
     var arrSubCategory = ArrayList<Recipes>()
